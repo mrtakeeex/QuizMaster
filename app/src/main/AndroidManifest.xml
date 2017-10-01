@@ -25,6 +25,10 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".QuizMasterMainActivity"
+            android:label="Game room"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuizMasterSettingsActivity"
             android:label="Quiz settings"
             android:screenOrientation="portrait" />
     </application>

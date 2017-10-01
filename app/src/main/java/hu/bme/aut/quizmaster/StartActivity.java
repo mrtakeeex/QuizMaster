@@ -44,16 +44,16 @@ public class StartActivity extends AppCompatActivity {
         dialog.setContentView(R.layout.dialog_player_init);
         dialog.show();
 
-        openQuizMasterMainActivity(dialog);
+        openQuizMasterSettingsActivity(dialog);
     }
 
-    private void openQuizMasterMainActivity(final Dialog playerDialog) {
+    private void openQuizMasterSettingsActivity(final Dialog playerDialog) {
         Button btnPlayAsQuizMaster = (Button) playerDialog.findViewById(R.id.btnPlayDialog);
         btnPlayAsQuizMaster.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EditText editText = (EditText) playerDialog.findViewById(R.id.etNickName);
-                Intent intent = new Intent(StartActivity.this, QuizMasterMainActivity.class);
+                Intent intent = new Intent(StartActivity.this, QuizMasterSettingsActivity.class);
                 Bundle bundle = new Bundle();
                 bundle.putString("playerNickName", editText.getText().toString());
                 intent.putExtras(bundle);
