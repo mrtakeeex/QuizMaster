@@ -9,13 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
+        <activity
+            android:name=".StartActivity"
+            android:label="Quiz Master"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PlayerMainActivity"
+            android:label="Lobby"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".QuizMasterMainActivity"
+            android:label="Quiz settings"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>
