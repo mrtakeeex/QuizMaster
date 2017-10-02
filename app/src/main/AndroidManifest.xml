@@ -21,11 +21,11 @@
         </activity>
         <activity
             android:name=".PlayerMainActivity"
-            android:label="Lobby"
+            android:label="Available rooms"
             android:screenOrientation="portrait" />
         <activity
             android:name=".QuizMasterMainActivity"
-            android:label="Game room"
+            android:label="Lobby"
             android:screenOrientation="portrait" />
         <activity
             android:name=".QuizMasterSettingsActivity"

@@ -12,7 +12,6 @@ public class PlayerMainActivity extends AppCompatActivity {
 
     private String playerName;
     private LayoutInflater layoutInflater;
-    private LinearLayout availableRoomsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,7 @@ public class PlayerMainActivity extends AppCompatActivity {
         }
 
         View availableRoomItem = layoutInflater.inflate(R.layout.available_room_item, null);
-        availableRoomsList = (LinearLayout) findViewById(R.id.available_rooms_list);
+        LinearLayout availableRoomsList = (LinearLayout) findViewById(R.id.available_rooms_list);
 
         availableRoomsList.addView(availableRoomItem);
     }
