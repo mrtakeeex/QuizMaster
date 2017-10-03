@@ -31,6 +31,11 @@
             android:name=".QuizMasterSettingsActivity"
             android:label="Quiz settings"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".DialogPlayerInit"
+            android:screenOrientation="portrait"
+            android:label="Add a nickname"
+            android:theme="@android:style/Theme.Dialog" />
     </application>
 
 </manifest>

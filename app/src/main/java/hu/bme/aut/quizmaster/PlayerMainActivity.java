@@ -1,14 +1,13 @@
 package hu.bme.aut.quizmaster;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
-public class PlayerMainActivity extends AppCompatActivity {
+public class PlayerMainActivity extends Activity {
 
     private String playerName;
     private LayoutInflater layoutInflater;
@@ -20,11 +19,10 @@ public class PlayerMainActivity extends AppCompatActivity {
 
         layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null) {
-            playerName = bundle.getString("playerNickName");
+        if (!getIntent().getStringExtra(KeyStore.PLAYER_NAME).isEmpty()) {
+            playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
         } else {
-            playerName = "unknown";
+            playerName = KeyStore.UNKNOWN_PLAYER;
         }
 
         View availableRoomItem = layoutInflater.inflate(R.layout.available_room_item, null);

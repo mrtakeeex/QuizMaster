@@ -1,12 +1,14 @@
 package hu.bme.aut.quizmaster;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-public class QuizMasterSettingsActivity extends AppCompatActivity {
+public class QuizMasterSettingsActivity extends Activity {
+
+    private String playerName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,6 +16,12 @@ public class QuizMasterSettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_master_settings);
 
         openQuizMasterMainActivity();
+
+        if (!getIntent().getStringExtra(KeyStore.PLAYER_NAME).isEmpty()) {
+            playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
+        } else {
+            playerName = KeyStore.UNKNOWN_PLAYER;
+        }
     }
 
     private void openQuizMasterMainActivity() {
@@ -21,8 +29,7 @@ public class QuizMasterSettingsActivity extends AppCompatActivity {
         btnCreateRoom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuizMasterSettingsActivity.this, QuizMasterMainActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(QuizMasterSettingsActivity.this, QuizMasterMainActivity.class));
             }
         });
     }
