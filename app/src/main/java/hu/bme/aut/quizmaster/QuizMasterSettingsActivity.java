@@ -17,11 +17,7 @@ public class QuizMasterSettingsActivity extends Activity {
 
         openQuizMasterMainActivity();
 
-        if (!getIntent().getStringExtra(KeyStore.PLAYER_NAME).isEmpty()) {
-            playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
-        } else {
-            playerName = KeyStore.UNKNOWN_PLAYER;
-        }
+        playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
     }
 
     private void openQuizMasterMainActivity() {

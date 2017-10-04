@@ -2,13 +2,11 @@ package hu.bme.aut.quizmaster;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.inputmethodservice.Keyboard;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.io.Serializable;
+import android.widget.Toast;
 
 public class DialogPlayerInit extends Activity {
     @Override
@@ -21,6 +19,10 @@ public class DialogPlayerInit extends Activity {
             @Override
             public void onClick(View view) {
                 EditText editText = (EditText) findViewById(R.id.etNickName);
+                if (editText.getText().toString().isEmpty()) {
+                    Toast.makeText(DialogPlayerInit.this, "Type a nickname!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Intent intent = new Intent(DialogPlayerInit.this, (Class) getIntent().getSerializableExtra(KeyStore.WHICH_BUTTON_CLICKED));
                 intent.putExtra(KeyStore.PLAYER_NAME, editText.getText().toString());
                 startActivity(intent);

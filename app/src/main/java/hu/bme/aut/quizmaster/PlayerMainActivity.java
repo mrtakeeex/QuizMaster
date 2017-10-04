@@ -19,11 +19,7 @@ public class PlayerMainActivity extends Activity {
 
         layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        if (!getIntent().getStringExtra(KeyStore.PLAYER_NAME).isEmpty()) {
-            playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
-        } else {
-            playerName = KeyStore.UNKNOWN_PLAYER;
-        }
+        playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
 
         View availableRoomItem = layoutInflater.inflate(R.layout.available_room_item, null);
         LinearLayout availableRoomsList = (LinearLayout) findViewById(R.id.available_rooms_list);

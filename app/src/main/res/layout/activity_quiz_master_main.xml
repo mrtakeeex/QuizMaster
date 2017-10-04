@@ -9,7 +9,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Main Activity!" />
+        android:text="Hello Main Activity!"
+        android:textSize="26dp" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -19,11 +20,15 @@
             android:id="@+id/available_players_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:scrollbars="vertical" />
 
     </ScrollView>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start game!"/>
+        android:layout_gravity="center|bottom"
+        android:text="Start game!"
+        android:textSize="20dp" />
 </LinearLayout>
