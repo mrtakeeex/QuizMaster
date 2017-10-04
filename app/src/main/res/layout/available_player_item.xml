@@ -4,9 +4,21 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+
+    <android.support.v7.widget.CardView
+        style="@style/Custom.Widget.CardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="player" />
+        android:layout_gravity="center"
+        android:background="@drawable/myrect"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="PLAYER"
+            android:textSize="20dp" />
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

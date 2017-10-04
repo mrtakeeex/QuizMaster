@@ -10,4 +10,11 @@
         <item name="android:navigationBarColor">@color/primary</item>
     </style>
 
+    <style name="Custom.Widget.CardView" parent="CardView">
+        <item name="cardBackgroundColor">@color/primary</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="contentPadding">4dp</item>
+    </style>
+
 </resources>
