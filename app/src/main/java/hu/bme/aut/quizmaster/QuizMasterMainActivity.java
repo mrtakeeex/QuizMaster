@@ -11,15 +11,12 @@ import android.widget.LinearLayout;
 
 public class QuizMasterMainActivity extends Activity {
 
-    private String playerName;
-    private LayoutInflater layoutInflater;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_master_main);
 
-        layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         View availablePlayerItem = layoutInflater.inflate(R.layout.available_player_item, null);
         LinearLayout availablePlayersList = (LinearLayout) findViewById(R.id.available_players_list);

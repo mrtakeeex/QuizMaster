@@ -23,9 +23,9 @@ public class DialogPlayerInit extends Activity {
                     Toast.makeText(DialogPlayerInit.this, "Type a nickname!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                Intent intent = new Intent(DialogPlayerInit.this, (Class) getIntent().getSerializableExtra(KeyStore.WHICH_BUTTON_CLICKED));
-                intent.putExtra(KeyStore.PLAYER_NAME, editText.getText().toString());
-                startActivity(intent);
+
+                KeyStore.values.put(KeyStore.PLAYER_NAME, editText.getText().toString());
+                startActivity(new Intent(DialogPlayerInit.this, (Class) getIntent().getSerializableExtra(KeyStore.WHICH_BUTTON_CLICKED)));
             }
         });
     }

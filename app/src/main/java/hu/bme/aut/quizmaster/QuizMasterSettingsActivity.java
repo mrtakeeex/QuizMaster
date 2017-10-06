@@ -8,8 +8,6 @@ import android.widget.Button;
 
 public class QuizMasterSettingsActivity extends Activity {
 
-    private String playerName;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +15,7 @@ public class QuizMasterSettingsActivity extends Activity {
 
         openQuizMasterMainActivity();
 
-        playerName = getIntent().getStringExtra(KeyStore.PLAYER_NAME);
+//        playerName = KeyStore.values.get(KeyStore.PLAYER_NAME);
     }
 
     private void openQuizMasterMainActivity() {
