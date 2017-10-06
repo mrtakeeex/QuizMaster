@@ -33,9 +33,13 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".DialogPlayerInit"
-            android:screenOrientation="portrait"
             android:label="Add a nickname"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".QuizMasterGameActivity"
+            android:label="Game"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

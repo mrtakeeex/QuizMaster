@@ -2,9 +2,11 @@ package hu.bme.aut.quizmaster;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
 public class QuizMasterMainActivity extends Activity {
@@ -23,5 +25,17 @@ public class QuizMasterMainActivity extends Activity {
         LinearLayout availablePlayersList = (LinearLayout) findViewById(R.id.available_players_list);
 
         availablePlayersList.addView(availablePlayerItem);
+
+        startGame();
+    }
+
+    private void startGame() {
+        Button btnStartGame = (Button) findViewById(R.id.btnStartGame);
+        btnStartGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(QuizMasterMainActivity.this, QuizMasterGameActivity.class));
+            }
+        });
     }
 }
