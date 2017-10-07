@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hu.bme.aut.quizmaster.QuizMasterGameActivity">
+    tools:context="hu.bme.aut.quizmaster.UserInterface.QuizMasterGameActivity">
 
     <TextView
         android:id="@+id/tvTest1"

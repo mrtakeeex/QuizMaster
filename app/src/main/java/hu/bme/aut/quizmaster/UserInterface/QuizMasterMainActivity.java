@@ -1,4 +1,4 @@
-package hu.bme.aut.quizmaster;
+package hu.bme.aut.quizmaster.UserInterface;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+
+import hu.bme.aut.quizmaster.R;
 
 public class QuizMasterMainActivity extends Activity {
 

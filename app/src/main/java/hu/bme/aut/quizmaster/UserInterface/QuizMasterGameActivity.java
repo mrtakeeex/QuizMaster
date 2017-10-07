@@ -1,4 +1,4 @@
-package hu.bme.aut.quizmaster;
+package hu.bme.aut.quizmaster.UserInterface;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import java.util.List;
 
 import hu.bme.aut.quizmaster.Database.Question;
 import hu.bme.aut.quizmaster.Database.Request;
+import hu.bme.aut.quizmaster.R;
 
 public class QuizMasterGameActivity extends Activity {
 

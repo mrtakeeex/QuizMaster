@@ -1,10 +1,12 @@
-package hu.bme.aut.quizmaster;
+package hu.bme.aut.quizmaster.UserInterface;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import hu.bme.aut.quizmaster.R;
 
 public class QuizMasterSettingsActivity extends Activity {
 

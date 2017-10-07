@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="6"
-    tools:context="hu.bme.aut.quizmaster.StartActivity">
+    tools:context="hu.bme.aut.quizmaster.UserInterface.StartActivity">
 
     <TextView
+        style="@style/HeaderText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:padding="20dp"
         android:text="Quiz Master!"
         android:textAlignment="center"
-        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,16 +27,14 @@
         android:layout_weight="2"
         android:padding="20dp"
         android:text="Welcome in my game! You have the chance to be the quiz master or you can compare your knowledge with your friends as a player! Please make your decision now!"
-        android:textAlignment="center"
-        android:textSize="26dp" />
+        android:textAlignment="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="I want to be a"
-        android:textAlignment="center"
-        android:textSize="30dp" />
+        android:textAlignment="center" />
 
     <Button
         android:id="@+id/btnPlayer"
@@ -46,8 +44,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="15dp"
         android:layout_weight="1"
-        android:text="Player"
-        android:textSize="28dp" />
+        android:text="Player" />
 
     <Button
         android:id="@+id/btnQuizMaster"
@@ -55,7 +52,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_weight="1"
-        android:text="Quiz Master"
-        android:textSize="28dp" />
+        android:text="Quiz Master" />
 
 </LinearLayout>

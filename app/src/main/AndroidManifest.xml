@@ -25,7 +25,7 @@
             android:value="hu.bme.aut.quizmaster" />
 
         <activity
-            android:name=".StartActivity"
+            android:name=".UserInterface.StartActivity"
             android:label="Quiz Master"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -35,24 +35,24 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlayerMainActivity"
+            android:name=".UserInterface.PlayerMainActivity"
             android:label="Available rooms"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".QuizMasterMainActivity"
+            android:name=".UserInterface.QuizMasterMainActivity"
             android:label="Lobby"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".QuizMasterSettingsActivity"
+            android:name=".UserInterface.QuizMasterSettingsActivity"
             android:label="Quiz settings"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".DialogPlayerInit"
+            android:name=".UserInterface.DialogPlayerInit"
             android:label="Add a nickname"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".QuizMasterGameActivity"
+            android:name=".UserInterface.QuizMasterGameActivity"
             android:label="Game"
             android:screenOrientation="portrait" />
     </application>

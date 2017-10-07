@@ -103,6 +103,6 @@ public class Request {
     }
 
     public Question getQuestionWithId(String id) {
-        return questionList.stream().filter(o -> o.getId().equals(id)).map(o -> o).collect(Collectors.toList()).get(0);
+        return questionList.stream().filter(o -> o.getId().equals(id)).collect(Collectors.toList()).get(0);
     }
 }
