@@ -9,8 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Main Activity!"
-        android:textSize="26dp" />
+        android:text="Hello Main Activity!" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +28,6 @@
         android:id="@+id/btnStartGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:text="Start game!"
-        android:textSize="20dp" />
+        android:layout_margin="15dp"
+        android:text="Start game!" />
 </LinearLayout>

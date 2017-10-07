@@ -8,13 +8,12 @@
         android:id="@+id/etNickName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="your nick"
-        android:textSize="24dp" />
+        android:hint="your nick" />
 
     <Button
         android:id="@+id/btnPlayDialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Play!"
-        android:textSize="28dp" />
+        android:textSize="26dp" />
 </LinearLayout>

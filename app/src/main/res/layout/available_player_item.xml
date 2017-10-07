@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
     <android.support.v7.widget.CardView
         style="@style/Custom.Widget.CardView"
         android:layout_width="match_parent"
@@ -17,8 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:text="PLAYER"
-            android:textSize="20dp" />
+            android:text="PLAYER" />
     </android.support.v7.widget.CardView>
 
 </LinearLayout>

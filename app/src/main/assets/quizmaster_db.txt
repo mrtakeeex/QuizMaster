@@ -1,0 +1,3 @@
+tesztQ1;Answ1;Answ2;Answ3;Answ4;GENERAL
+tesztQ2;Answ1;Answ2;Answ3;Answ4;BIOLOGY
+tesztQ3;Answ1;Answ2;Answ3;Answ4;AWARDS
