@@ -6,13 +6,6 @@
     android:orientation="vertical"
     tools:context="hu.bme.aut.quizmaster.UserInterface.QuizMasterGameActivity">
 
-    <TextView
-        android:id="@+id/tvTest1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <!-- use activity_game.xml instead of this -->
 
-    <TextView
-        android:id="@+id/tvTest2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -18,6 +18,17 @@ public class StartActivity extends Activity {
 
         playAsPlayer();
         playAsQuizMaster();
+        openQuickPlayActivity();
+    }
+
+    private void openQuickPlayActivity() {
+        Button btnQuickPlay = (Button) findViewById(R.id.btnQuickPlay);
+        btnQuickPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(StartActivity.this, EndlessGameActivity.class));
+            }
+        });
     }
 
     private void playAsPlayer() {

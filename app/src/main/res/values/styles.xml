@@ -19,6 +19,7 @@
 
     <style name="HeaderText">
         <item name="android:textSize">32dp</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/secondary_text</item>
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:textStyle">bold</item>
@@ -26,19 +27,39 @@
 
     <style name="DefaultText">
         <item name="android:textSize">26dp</item>
+        <item name="android:textAlignment">center</item>
         <item name="android:textColor">@color/primary_text</item>
         <item name="android:fontFamily">sans-serif-light</item>
         <item name="android:textStyle">normal</item>
     </style>
 
+    <style name="QuestionText">
+        <item name="android:textSize">24dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
     <style name="DefaultButton">
         <item name="android:background">@color/primary</item>
         <item name="android:textSize">28dp</item>
+        <item name="android:padding">4dp</item>
         <item name="android:textAlignment">center</item>
         <item name="android:gravity">center</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">italic</item>
         <item name="android:textColor">@color/secondary_text</item>
+    </style>
+
+    <style name="QuizAnswerButton">
+        <item name="android:background">@color/primary</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/primary_text</item>
     </style>
 
 </resources>

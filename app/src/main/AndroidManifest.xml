@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <meta-data
             android:name="DATABASE"
             android:value="questions.db" />
@@ -54,6 +53,10 @@
         <activity
             android:name=".UserInterface.QuizMasterGameActivity"
             android:label="Game"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserInterface.EndlessGameActivity"
+            android:label="Endless mode"
             android:screenOrientation="portrait" />
     </application>
 

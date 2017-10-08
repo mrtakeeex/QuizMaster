@@ -9,6 +9,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -90,6 +92,15 @@ public class Request {
 
     public List<Question> getQuestionList() {
         return questionList;
+    }
+
+    public List<String> getAllAnswer(Question question) {
+        return new LinkedList<String>() {{
+            add(question.getAnswerGood());
+            add(question.getAnswerWrong_1());
+            add(question.getAnswerWrong_2());
+            add(question.getAnswerWrong_3());
+        }};
     }
 
     public List<Question> getQuestionsInTopic(Topic topic) {
