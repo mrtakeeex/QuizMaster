@@ -1,3 +1,50 @@
-tesztQ1;Answ1;Answ2;Answ3;Answ4;GENERAL
-tesztQ2;Answ1;Answ2;Answ3;Answ4;BIOLOGY
-tesztQ3;Answ1;Answ2;Answ3;Answ4;AWARDS
+Brass gets discoloured in air because of the presence of which of the following gases in air?;Hydrogen sulphide;Oxygen;Carbon dioxide;Nitrogen;SCIENCE
+Which of the following is a non metal that remains liquid at room temperature?;Bromine;Chlorine;Helium;Phosphorous;SCIENCE
+Chlorophyll is a naturally occurring chelate compound in which central metal is;magnesium;copper;iron;calcium;SCIENCE
+Which of the following is used in pencils?;Graphite;Charcoal;Silicon;Phosphorous;SCIENCE
+Which of the following metals forms an amalgam with other metals?;Mercury;Tin;Lead;Zinc;SCIENCE
+Ordinary table salt is sodium chloride. What is baking soda?;Sodium bicarbonate;Potassium chloride;Potassium carbonate;Potassium hydroxide;BIOLOGY
+Pollination is best defined as;transfer of pollen from anther to stigma;germination of pollen grains;growth of pollen tube in ovule;visiting flowers by insects;BIOLOGY
+Plants receive their nutrients mainly from;soil;atmosphere;light;chlorophyll;BIOLOGY
+Movement of cell against concentration gradient is called;active transport;osmosis;diffusion;passive transport;BIOLOGY
+Plants synthesis protein from;amino acids;sugar;starch;fatty acids;BIOLOGY
+In which year was Pulitzer Prize established?;1917;1918;1922;1928;AWARDS
+B. C. Roy Award is given in the field of;Medicine;Journalism;Music;Environment;AWARDS
+Which of the following societies has instituted an award for an outstanding parliamentarian?;G. B. Pant Memorial Society;R. D. Birla samara Kosh;Institute of Constitutional and Parliamentary Studies;Jamanlal Bajaj Foundation;AWARDS
+Which state gives Mewar Award?;Rajasthan;Punjab;Haryana;Delhi;AWARDS
+Who is the first Asian Winner of Nobel Prize?;Rabindranath Tagore;Mother Teresa;Rajiv Gandhi;C. V. Raman;AWARDS
+Grand Central Terminal, Park Avenue, New York is the world's;largest railway station;highest railway station;longest railway station;None of the above;GENERAL
+Eritrea, which became the 182nd member of the UN in 1993, is in the continent of;Africa;Asia;Europe;Australia;GENERAL
+Garampani sanctuary is located at;Diphu, Assam;Junagarh, Gujarat;Kohima, Nagaland;Gangtok, Sikkim;GENERAL
+Hitler party which came into power in 1933 is known as;Nazi Party;Ku-Klux-Klan;Labour Party;Democratic Party;GENERAL
+FFC stands for;Film Finance Corporation;Foreign Finance Corporation;Federation of Football Council;None of them;GENERAL
+The Homolographic projection has the correct representation of;area;shape;baring;distance;GEOGRAPHY
+The hazards of radiation belts include;All of them;adverse effect on living organisms;damage of solar cells of spacecraft;deterioration of electronic circuits;GEOGRAPHY
+The great Victoria Desert is located in;Australia;Canada;West Africa;North America;GEOGRAPHY
+The landmass of which of the following continents is the least?;Australia;Africa;Asia;Europe;GEOGRAPHY
+The habitats valuable for commercially harvested species are called;sea grass bed;coral reefs;hot spots;None of them;GEOGRAPHY
+The nucleus of an atom consists of;protons and neutrons;electrons and neutrons;electrons and protons;All of them;CHEMISTRY
+The number of moles of solute present in 1 kg of a solvent is called its;molality;molarity;normality;formality;CHEMISTRY
+The most electronegative element among the following is;sodium;bromine;fluorine;oxygen;CHEMISTRY
+The metal used to recover copper from a solution of copper sulphate is;Fe;Ag;Na;Hg;CHEMISTRY
+The metallurgical process in which a metal is obtained in a fused state is called;smelting;roasting;calcinations;froth floatation;CHEMISTRY
+In which decade was the American Institute of Electrical Engineers (AIEE) founded?;1880s;1850s;1930s;1950s;TECHNOLOGY
+What is part of a database that holds only one type of information?;Field;Report;Record;File;TECHNOLOGY
+In which decade with the first transatlantic radio broadcast occur?;1900s;1860s;1850s;1870s;TECHNOLOGY
+Which is a type of Electrically-Erasable Programmable Read-Only Memory?;Flash;Flange;Fury;FRAM;TECHNOLOGY
+Who developed Yahoo?;David Filo & Jerry Yang;Vint Cerf & Robert Kahn;Dennis Ritchie & Ken Thompson;Steve Case & Jeff Bezos;TECHNOLOGY
+The absorption of ink by blotting paper involves;capillary action phenomenon;diffusion of ink through the blotting;viscosity of ink;siphon action;PHYSICS
+Nuclear sizes are expressed in a unit named;Fermi;Angstrom;Newton;Tesla;PHYSICS
+Light year is a unit of;distance;time;intensity of light;light;PHYSICS
+Light from the Sun reaches us in nearly;8 minutes;4 minutes;2 minutes;16 minutes;PHYSICS
+Pascal is the unit for;pressure;thrust;frequency;conductivity;PHYSICS
+Who invented the BALLPOINT PEN?;Biro Brothers;Waterman Brothers;Bicc Brothers;Write Brothers;INVENTIONS
+In which decade was the first solid state integrated circuit demonstrated?;1950s;1960s;1970s;1980s;INVENTIONS
+Which scientist discovered the radioactive element radium?;Marie Curie;Benjamin Franklin;Albert Einstein;Isaac Newton;INVENTIONS
+When was barb wire patented?;1874;1840;1895;1900;INVENTIONS
+What Galileo invented?;Thermometer;Barometer;Microscope;Pendulum clock;INVENTIONS
+Which was the 1st non Test playing country to beat India in an international match?;Sri Lanka;Canada;Zimbabwe;East Africa;SPORTS
+Which county did Ravi Shastri play for?;Glamorgan;Leicestershire;Gloucestershire;Lancashire;SPORTS
+Who was the first Indian to win the World Amateur Billiards title?;Wilson Jones;Michael Ferreira;Geet Sethi;Manoj Kothari;SPORTS
+Who is the first Indian woman to win an Asian Games gold in 400m run?;Kamaljit Sandhu;P.T.Usha;M.L.Valsamma;K.Malleshwari;SPORTS
+When was Amateur Athletics Federation of India established?;1936;1946;1956;1966;SPORTS
