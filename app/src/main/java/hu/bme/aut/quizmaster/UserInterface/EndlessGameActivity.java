@@ -11,6 +11,7 @@ import java.util.Random;
 
 import hu.bme.aut.quizmaster.Database.Question;
 import hu.bme.aut.quizmaster.Database.Request;
+import hu.bme.aut.quizmaster.Game.Game;
 import hu.bme.aut.quizmaster.R;
 
 public class EndlessGameActivity extends Activity {
@@ -19,6 +20,9 @@ public class EndlessGameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // TODO: this and the other 3 classes
+        Game game = new Game(this, this);
 
         TextView tvTopic = (TextView) findViewById(R.id.tvTopic);
         TextView tvQuestion = (TextView) findViewById(R.id.tvQuestion);
