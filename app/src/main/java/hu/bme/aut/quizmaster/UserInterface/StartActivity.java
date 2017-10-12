@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import hu.bme.aut.quizmaster.KeyStore;
+import hu.bme.aut.quizmaster.Utility.KeyStore;
 import hu.bme.aut.quizmaster.R;
 
 public class StartActivity extends Activity {

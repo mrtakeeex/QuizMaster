@@ -1,6 +1,6 @@
 package hu.bme.aut.quizmaster.Game;
 
-class Player {
+public class Player {
     private String name;
     private int score;
 
@@ -9,12 +9,17 @@ class Player {
         this.score = 0;
     }
 
+    public Player(){
+        this.name = "undefined";
+        this.score = 0;
+    }
+
     public int getScore() {
         return score;
     }
 
-    public void setScore(int score) {
-        this.score = score;
+    public void incrementScore(int score) {
+        this.score += score;
     }
 
     public String getName() {

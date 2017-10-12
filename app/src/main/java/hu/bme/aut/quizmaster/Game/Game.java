@@ -3,8 +3,10 @@ package hu.bme.aut.quizmaster.Game;
 import android.app.Activity;
 import android.content.Context;
 import android.os.CountDownTimer;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,11 +16,13 @@ import hu.bme.aut.quizmaster.Database.Question;
 import hu.bme.aut.quizmaster.Database.Request;
 import hu.bme.aut.quizmaster.R;
 
+import static java.lang.Math.toIntExact;
+
 public class Game {
     private Activity activity;
     private Context context;
     private Random random;
-    // controls
+
     private TextView tvTopic;
     private TextView tvQuestion;
     private TextView tvTimer;
@@ -42,14 +46,6 @@ public class Game {
         initControls();
     }
 
-    private void setQuestionList(Context context) {
-        if (Details.getTopic() != null) {
-            this.questionList = Request.getInstance(context).getQuestionsInTopic(Details.getTopic());
-        } else {
-            this.questionList = Request.getInstance(context).getQuestionList();
-        }
-    }
-
     private void initControls() {
         this.tvTopic = (TextView) activity.findViewById(R.id.tvTopic);
         this.tvQuestion = (TextView) activity.findViewById(R.id.tvQuestion);
@@ -63,29 +59,56 @@ public class Game {
 
     public void startEndlessMode() {
         Details.setDefaultSettings();
-//        while (!questionList.isEmpty()) {
-            getRandomQuestion();
-            startTimerForQuestion();
-//        }
+        Player player = new Player();
+
+        // TODO: WAIT UNTIL BTN CLICKED IS TRUE AND THEN GO ON WITH THIS
+        while (!questionList.isEmpty()) {
+            Details.incrementElapsedQuestionNum();
+            Question randomQuestion = getRandomQuestion();
+            waitForPlayerAnswer(randomQuestion, player);
+        }
     }
 
-    private void startTimerForQuestion() {
-        new CountDownTimer(Details.getTimeForAnswerQuestionInMillis(), 1000) {
+    private void waitForPlayerAnswer(Question question, Player player) {
+        String goodAnswer = question.getAnswerGood();
+
+        new CountDownTimer(Details.getTimeForAnswerQuestionInSec() * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 tvTimer.setText("" + millisUntilFinished / 1000);
+
+                for (Button button : Arrays.asList(btnAnswer1, btnAnswer2, btnAnswer3, btnAnswer4)) {
+                    button.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (button.getText().equals(goodAnswer)) {
+                                player.incrementScore(toIntExact(millisUntilFinished / 1000));
+                                Toast.makeText(context, "Good! +" + toIntExact(millisUntilFinished / 1000) + " points!",
+                                        Toast.LENGTH_LONG).show();
+                                // TODO: kovetkezo kerdesre ugrani
+                            } else {
+                                Toast.makeText(context, "WRONG! The good answer is: " + goodAnswer,
+                                        Toast.LENGTH_LONG).show();
+                                // TODO: kovetkezo kerdesre ugrani
+                            }
+                        }
+                    });
+                }
             }
+
             public void onFinish() {
-                tvTimer.setText("Done!");
+                tvTimer.setText("Time up!");
+                Toast.makeText(context, "Time up! The good answer is: " + goodAnswer,
+                        Toast.LENGTH_LONG).show();
+                // TODO: kovetkezo kerdesre ugrani
             }
         }.start();
     }
 
     public void startMultiplayerMode() {
         // TODO
-        setQuestionList(context);
     }
 
-    private void getRandomQuestion() {
+    private Question getRandomQuestion() {
         int currQuestionIndex = random.nextInt(questionList.size());
         Question question = questionList.get(currQuestionIndex);
 
@@ -102,6 +125,8 @@ public class Game {
         tvResults.setText("Good anwers:" + "0" + "/" + Details.getElapsedQuestionNum());
         tvTopic.setText(question.getTopic().toString());
         tvQuestion.setText(question.getQuestionStr());
+
+        return question;
     }
 
     public void addPlayer(Player player) {
