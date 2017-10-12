@@ -54,6 +54,10 @@
             android:name=".UserInterface.EndlessGameActivity"
             android:label="Endless mode"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserInterface.PlayerLobbyActivity"
+            android:label="Lobby"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

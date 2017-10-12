@@ -10,6 +10,7 @@ public class Question extends SugarRecord {
     private String answerWrong_1;
     private String answerWrong_2;
     private String answerWrong_3;
+    private Topic topic;
 
     public Question() {
     }
@@ -27,49 +28,23 @@ public class Question extends SugarRecord {
         return questionStr;
     }
 
-    public void setQuestionStr(String questionStr) {
-        this.questionStr = questionStr;
-    }
-
     public String getAnswerGood() {
         return answerGood;
-    }
-
-    public void setAnswerGood(String answerGood) {
-        this.answerGood = answerGood;
     }
 
     public String getAnswerWrong_1() {
         return answerWrong_1;
     }
 
-    public void setAnswerWrong_1(String answerWrong_1) {
-        this.answerWrong_1 = answerWrong_1;
-    }
-
     public String getAnswerWrong_2() {
         return answerWrong_2;
-    }
-
-    public void setAnswerWrong_2(String answerWrong_2) {
-        this.answerWrong_2 = answerWrong_2;
     }
 
     public String getAnswerWrong_3() {
         return answerWrong_3;
     }
 
-    public void setAnswerWrong_3(String answerWrong_3) {
-        this.answerWrong_3 = answerWrong_3;
-    }
-
     public Topic getTopic() {
         return topic;
     }
-
-    public void setTopic(Topic topic) {
-        this.topic = topic;
-    }
-
-    private Topic topic;
 }

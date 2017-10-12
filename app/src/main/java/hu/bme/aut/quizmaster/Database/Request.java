@@ -9,10 +9,10 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class Request {
@@ -81,6 +81,10 @@ public class Request {
             default:
                 return Topic.GENERAL;
         }
+    }
+
+    public List<String> getTopicNamesInString() {
+        return Stream.of(Topic.values()).map(Topic::name).collect(Collectors.toList());
     }
 
     public static Request getInstance(Context context) {
