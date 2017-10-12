@@ -18,7 +18,7 @@ import hu.bme.aut.quizmaster.R;
 
 import static java.lang.Math.toIntExact;
 
-public class Game {
+public class Game implements Runnable {
     private Activity activity;
     private Context context;
     private Random random;
@@ -51,26 +51,51 @@ public class Game {
         this.tvQuestion = (TextView) activity.findViewById(R.id.tvQuestion);
         this.tvTimer = (TextView) activity.findViewById(R.id.tvTimer);
         this.tvResults = (TextView) activity.findViewById(R.id.tvResults);
-        this.btnAnswer1 = (Button) activity.findViewById(R.id.btnQpAnsw1);
-        this.btnAnswer2 = (Button) activity.findViewById(R.id.btnQpAnsw2);
-        this.btnAnswer3 = (Button) activity.findViewById(R.id.btnQpAnsw3);
-        this.btnAnswer4 = (Button) activity.findViewById(R.id.btnQpAnsw4);
+        this.btnAnswer1 = (Button) activity.findViewById(R.id.btnAnswer1);
+        this.btnAnswer2 = (Button) activity.findViewById(R.id.btnAnswer2);
+        this.btnAnswer3 = (Button) activity.findViewById(R.id.btnAnswer3);
+        this.btnAnswer4 = (Button) activity.findViewById(R.id.btnAnswer4);
     }
+
+    Player player = new Player();
 
     public void startEndlessMode() {
         Details.setDefaultSettings();
-        Player player = new Player();
+
+
+        goToNextQuestion(player);
 
         // TODO: WAIT UNTIL BTN CLICKED IS TRUE AND THEN GO ON WITH THIS
-        while (!questionList.isEmpty()) {
-            Details.incrementElapsedQuestionNum();
-            Question randomQuestion = getRandomQuestion();
-            waitForPlayerAnswer(randomQuestion, player);
+//        while (!questionList.isEmpty() && (btnAnswer1.isPressed() || btnAnswer2.isPressed()
+//                || btnAnswer3.isPressed() || btnAnswer4.isPressed())) {
+//            goToNextQuestion(player);
+//        }
+
+
+        Thread thread = new Thread();
+        thread.start();
+    }
+
+    @Override
+    public void run() {
+        while (true) {
+            if (btnAnswer1.isPressed() || btnAnswer2.isPressed()
+                    || btnAnswer3.isPressed() || btnAnswer4.isPressed()) {
+                goToNextQuestion(player);
+            }
         }
     }
 
-    private void waitForPlayerAnswer(Question question, Player player) {
+    private void goToNextQuestion(Player player) {
+        Details.incrementElapsedQuestionNum();
+        Question randomQuestion = getRandomQuestion();
+        getTimeLeftInSecAfterPlayerAnswer(randomQuestion, player);
+    }
+
+
+    private int getTimeLeftInSecAfterPlayerAnswer(Question question, Player player) {
         String goodAnswer = question.getAnswerGood();
+        final int[] retSec = {0};
 
         new CountDownTimer(Details.getTimeForAnswerQuestionInSec() * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
@@ -84,11 +109,11 @@ public class Game {
                                 player.incrementScore(toIntExact(millisUntilFinished / 1000));
                                 Toast.makeText(context, "Good! +" + toIntExact(millisUntilFinished / 1000) + " points!",
                                         Toast.LENGTH_LONG).show();
-                                // TODO: kovetkezo kerdesre ugrani
+                                retSec[0] = toIntExact(millisUntilFinished / 1000);
                             } else {
                                 Toast.makeText(context, "WRONG! The good answer is: " + goodAnswer,
                                         Toast.LENGTH_LONG).show();
-                                // TODO: kovetkezo kerdesre ugrani
+                                retSec[0] = toIntExact(millisUntilFinished / 1000);
                             }
                         }
                     });
@@ -99,9 +124,10 @@ public class Game {
                 tvTimer.setText("Time up!");
                 Toast.makeText(context, "Time up! The good answer is: " + goodAnswer,
                         Toast.LENGTH_LONG).show();
-                // TODO: kovetkezo kerdesre ugrani
             }
         }.start();
+
+        return retSec[0];
     }
 
     public void startMultiplayerMode() {
@@ -152,4 +178,6 @@ public class Game {
     public void setQuizMaster(QuizMaster quizMaster) {
         this.quizMaster = quizMaster;
     }
+
+
 }

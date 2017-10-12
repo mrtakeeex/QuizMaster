@@ -57,7 +57,7 @@
             android:weightSum="4">
 
             <Button
-                android:id="@+id/btnQpAnsw1"
+                android:id="@+id/btnAnswer1"
                 style="@style/QuizAnswerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btnQpAnsw2"
+                android:id="@+id/btnAnswer2"
                 style="@style/QuizAnswerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btnQpAnsw3"
+                android:id="@+id/btnAnswer3"
                 style="@style/QuizAnswerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,7 +82,7 @@
                 android:layout_weight="1" />
 
             <Button
-                android:id="@+id/btnQpAnsw4"
+                android:id="@+id/btnAnswer4"
                 style="@style/QuizAnswerButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
