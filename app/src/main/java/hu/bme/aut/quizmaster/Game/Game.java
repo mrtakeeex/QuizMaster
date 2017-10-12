@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -18,7 +19,7 @@ import hu.bme.aut.quizmaster.R;
 
 import static java.lang.Math.toIntExact;
 
-public class Game implements Runnable {
+public class Game {
     private Activity activity;
     private Context context;
     private Random random;
@@ -39,6 +40,7 @@ public class Game implements Runnable {
     private QuizMaster quizMaster;
 
     public Game(Activity activity, Context context) {
+        this.players = new ArrayList<>();
         this.activity = activity;
         this.context = context;
         this.random = new Random();
@@ -57,13 +59,12 @@ public class Game implements Runnable {
         this.btnAnswer4 = (Button) activity.findViewById(R.id.btnAnswer4);
     }
 
-    Player player = new Player();
-
     public void startEndlessMode() {
         Details.setDefaultSettings();
 
+        players.add(new Player());
 
-        goToNextQuestion(player);
+        goToNextQuestion(players.get(0));
 
         // TODO: WAIT UNTIL BTN CLICKED IS TRUE AND THEN GO ON WITH THIS
 //        while (!questionList.isEmpty() && (btnAnswer1.isPressed() || btnAnswer2.isPressed()
@@ -71,25 +72,23 @@ public class Game implements Runnable {
 //            goToNextQuestion(player);
 //        }
 
-
-        Thread thread = new Thread();
-        thread.start();
-    }
-
-    @Override
-    public void run() {
-        while (true) {
-            if (btnAnswer1.isPressed() || btnAnswer2.isPressed()
-                    || btnAnswer3.isPressed() || btnAnswer4.isPressed()) {
-                goToNextQuestion(player);
+        activity.runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                while (true) {
+                    if (btnAnswer1.isPressed() || btnAnswer2.isPressed()
+                            || btnAnswer3.isPressed() || btnAnswer4.isPressed()) {
+                        goToNextQuestion(players.get(0));
+                    }
+                }
             }
-        }
+        });
     }
 
-    private void goToNextQuestion(Player player) {
-        Details.incrementElapsedQuestionNum();
+    void goToNextQuestion(Player player) {
         Question randomQuestion = getRandomQuestion();
         getTimeLeftInSecAfterPlayerAnswer(randomQuestion, player);
+        Details.incrementElapsedQuestionNum();
     }
 
 
@@ -179,5 +178,19 @@ public class Game implements Runnable {
         this.quizMaster = quizMaster;
     }
 
+    Button getBtnAnswer1() {
+        return btnAnswer1;
+    }
 
+    Button getBtnAnswer2() {
+        return btnAnswer2;
+    }
+
+    Button getBtnAnswer3() {
+        return btnAnswer3;
+    }
+
+    Button getBtnAnswer4() {
+        return btnAnswer4;
+    }
 }
