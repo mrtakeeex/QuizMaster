@@ -49,7 +49,7 @@ public class StartActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, DialogPlayerInit.class);
-                intent.putExtra(KeyStore.WHICH_BUTTON_CLICKED, QuizMasterSettingsActivity.class);
+                intent.putExtra(KeyStore.WHICH_BUTTON_CLICKED, QuizMasterMainActivity.class);
                 startActivity(intent);
             }
         });

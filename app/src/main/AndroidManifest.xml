@@ -42,10 +42,6 @@
             android:label="Lobby"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".UserInterface.QuizMasterSettingsActivity"
-            android:label="Quiz settings"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".UserInterface.DialogPlayerInit"
             android:label="Add a nickname"
             android:screenOrientation="portrait"
