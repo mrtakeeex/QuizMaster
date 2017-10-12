@@ -1,6 +1,5 @@
 package hu.bme.aut.quizmaster.Game;
 
-
 import android.app.Activity;
 import android.content.Context;
 import android.os.CountDownTimer;
@@ -34,14 +33,21 @@ public class Game {
 
     private List<Player> players;
     private QuizMaster quizMaster;
-    private int TimeForAnswerinMillis = 30000;
 
     public Game(Activity activity, Context context) {
         this.activity = activity;
         this.context = context;
-        this.questionList = Request.getInstance(context).getQuestionList();
         this.random = new Random();
+        this.questionList = Request.getInstance(context).getQuestionList();
         initControls();
+    }
+
+    private void setQuestionList(Context context) {
+        if (Details.getTopic() != null) {
+            this.questionList = Request.getInstance(context).getQuestionsInTopic(Details.getTopic());
+        } else {
+            this.questionList = Request.getInstance(context).getQuestionList();
+        }
     }
 
     private void initControls() {
@@ -56,18 +62,18 @@ public class Game {
     }
 
     public void startEndlessMode() {
-        while (!questionList.isEmpty()) {
+        Details.setDefaultSettings();
+//        while (!questionList.isEmpty()) {
             getRandomQuestion();
             startTimerForQuestion();
-        }
+//        }
     }
 
     private void startTimerForQuestion() {
-        new CountDownTimer(TimeForAnswerinMillis, 1000) {
+        new CountDownTimer(Details.getTimeForAnswerQuestionInMillis(), 1000) {
             public void onTick(long millisUntilFinished) {
                 tvTimer.setText("" + millisUntilFinished / 1000);
             }
-
             public void onFinish() {
                 tvTimer.setText("Done!");
             }
@@ -76,6 +82,7 @@ public class Game {
 
     public void startMultiplayerMode() {
         // TODO
+        setQuestionList(context);
     }
 
     private void getRandomQuestion() {
@@ -92,7 +99,7 @@ public class Game {
 
         questionList.remove(currQuestionIndex);
 
-        tvResults.setText("Good anwers: 4/7");
+        tvResults.setText("Good anwers:" + "0" + "/" + Details.getElapsedQuestionNum());
         tvTopic.setText(question.getTopic().toString());
         tvQuestion.setText(question.getQuestionStr());
     }
@@ -104,7 +111,6 @@ public class Game {
     public void removePlayer(Player player) {
         this.players.remove(player);
     }
-
 
     public List<Player> getPlayers() {
         return players;

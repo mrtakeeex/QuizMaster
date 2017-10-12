@@ -23,6 +23,5 @@ public class EndlessGameActivity extends Activity {
 
         Game game = new Game(this, this);
         game.startEndlessMode();
-
     }
 }

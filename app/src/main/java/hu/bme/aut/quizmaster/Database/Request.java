@@ -106,8 +106,4 @@ public class Request {
     public List<Question> getQuestionsInTopic(Topic topic) {
         return questionList.stream().filter(o -> o.getTopic().equals(topic)).collect(Collectors.toList());
     }
-
-    public Question getQuestionWithId(String id) {
-        return questionList.stream().filter(o -> o.getId().equals(id)).collect(Collectors.toList()).get(0);
-    }
 }
