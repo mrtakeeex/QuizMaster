@@ -27,25 +27,27 @@ public class QuizMasterGameActivity extends Activity {
         Button btnTopic4 = (Button) findViewById(R.id.btnTopic4);
         TextView tvQmTimer = (TextView) findViewById(R.id.tvQmTimer);
 
-        new CountDownTimer(10000, 1000) {
-            public void onTick(long millisUntilFinished) {
-                tvQmTimer.setText("" + millisUntilFinished / 1000);
-            }
-
-            public void onFinish() {
-                tvQmTimer.setText("Done!");
-            }
-        }.start();
 
         List<String> allTopics = Request.getInstance(this).getTopicNamesInString();
         Collections.shuffle(allTopics);
         List<String> fourTopics = allTopics.subList(0, 4);
 
         Random random = new Random();
-        for (Button button : Arrays.asList(btnTopic1, btnTopic2, btnTopic3, btnTopic4)) {
+        List<Button> buttons = Arrays.asList(btnTopic1, btnTopic2, btnTopic3, btnTopic4);
+        for (Button button : buttons) {
             int index = random.nextInt(fourTopics.size());
             button.setText(fourTopics.get(index));
             fourTopics.remove(index);
         }
+
+        new CountDownTimer(10000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                tvQmTimer.setText("" + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                tvQmTimer.setText(buttons.get(random.nextInt(buttons.size())).getText());
+            }
+        }.start();
     }
 }
