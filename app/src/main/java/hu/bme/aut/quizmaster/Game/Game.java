@@ -30,6 +30,7 @@ public class Game {
     private Button btnAnswer4;
 
     private List<Question> questionList;
+    private int elapsedQuestionNum;
 
     private List<Player> players;
     private QuizMaster quizMaster;
@@ -39,15 +40,8 @@ public class Game {
         this.context = context;
         this.random = new Random();
         this.questionList = Request.getInstance(context).getQuestionList();
+        this.elapsedQuestionNum = 0;
         initControls();
-    }
-
-    private void setQuestionList(Context context) {
-        if (Details.getTopic() != null) {
-            this.questionList = Request.getInstance(context).getQuestionsInTopic(Details.getTopic());
-        } else {
-            this.questionList = Request.getInstance(context).getQuestionList();
-        }
     }
 
     private void initControls() {
@@ -62,18 +56,18 @@ public class Game {
     }
 
     public void startEndlessMode() {
-        Details.setDefaultSettings();
 //        while (!questionList.isEmpty()) {
-            getRandomQuestion();
-            startTimerForQuestion();
+        getRandomQuestion();
+        startTimerForQuestion();
 //        }
     }
 
     private void startTimerForQuestion() {
-        new CountDownTimer(Details.getTimeForAnswerQuestionInMillis(), 1000) {
+        new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
                 tvTimer.setText("" + millisUntilFinished / 1000);
             }
+
             public void onFinish() {
                 tvTimer.setText("Done!");
             }
@@ -82,7 +76,6 @@ public class Game {
 
     public void startMultiplayerMode() {
         // TODO
-        setQuestionList(context);
     }
 
     private void getRandomQuestion() {
@@ -99,7 +92,7 @@ public class Game {
 
         questionList.remove(currQuestionIndex);
 
-        tvResults.setText("Good anwers:" + "0" + "/" + Details.getElapsedQuestionNum());
+        tvResults.setText("Good anwers:" + "0" + "/" + this.elapsedQuestionNum);
         tvTopic.setText(question.getTopic().toString());
         tvQuestion.setText(question.getQuestionStr());
     }
