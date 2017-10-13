@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -63,56 +64,22 @@ public class Game {
 
     public void startEndlessMode() {
         Details.setDefaultSettings();
-
         players.add(new Player());
-
         goToNextQuestion(players.get(0));
-
-        // TODO: WAIT UNTIL BTN CLICKED IS TRUE AND THEN GO ON WITH THIS
-//        while (!questionList.isEmpty() && (btnAnswer1.isPressed() || btnAnswer2.isPressed()
-//                || btnAnswer3.isPressed() || btnAnswer4.isPressed())) {
-//            goToNextQuestion(player);
-//        }
-        startUiRefreshingThread();
-    }
-
-    private void startUiRefreshingThread() {
-        new Thread() {
-            @Override
-            public void run() {
-                while (!questionList.isEmpty()) {
-                    activity.runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (btnAnswer1.isPressed() || btnAnswer2.isPressed()
-                                    || btnAnswer3.isPressed() || btnAnswer4.isPressed()) {
-                                goToNextQuestion(players.get(0));
-                                for (Button button : Arrays.asList(btnAnswer1, btnAnswer2, btnAnswer3, btnAnswer4)) {
-                                    button.setPressed(false);
-                                }
-                            }
-
-                        }
-                    });
-                }
-            }
-        }.start();
     }
 
     private void goToNextQuestion(Player player) {
         if (countDownTimer != null) {
             countDownTimer.cancel();
         }
-        getTimeLeftInSecAfterPlayerAnswer(getRandomQuestion(), player);
+        waitingForPlayerAnswer(getRandomQuestion(), player);
         Details.incrementElapsedQuestionNum();
     }
 
 
-    private int getTimeLeftInSecAfterPlayerAnswer(Question question, Player player) {
+    private void waitingForPlayerAnswer(Question question, Player player) {
         String goodAnswer = question.getAnswerGood();
-        final int[] retSec = {0};
 
-        // TODO: THIS PART DOES NOT COUNT SCORE OR SHOW TOASTS
         countDownTimer = new CountDownTimer(Details.getTimeForAnswerQuestionInSec() * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 tvTimer.setText("" + millisUntilFinished / 1000);
@@ -126,11 +93,11 @@ public class Game {
                                 player.incrementGoodAnswers();
                                 Toast.makeText(context, "Good! +" + toIntExact(millisUntilFinished / 1000) + " points!",
                                         Toast.LENGTH_LONG).show();
-                                retSec[0] = toIntExact(millisUntilFinished / 1000);
+                                goToNextQuestion(player);
                             } else {
                                 Toast.makeText(context, "WRONG! The good answer is: " + goodAnswer,
                                         Toast.LENGTH_LONG).show();
-                                retSec[0] = toIntExact(millisUntilFinished / 1000);
+                                goToNextQuestion(player);
                             }
                         }
                     });
@@ -141,10 +108,9 @@ public class Game {
                 tvTimer.setText("Time up!");
                 Toast.makeText(context, "Time up! The good answer was: " + goodAnswer,
                         Toast.LENGTH_LONG).show();
+                goToNextQuestion(player);
             }
         }.start();
-
-        return retSec[0];
     }
 
     public void startMultiplayerMode() {
@@ -152,8 +118,13 @@ public class Game {
     }
 
     private Question getRandomQuestion() {
-        int currQuestionIndex = random.nextInt(questionList.size());
-        Question question = questionList.get(currQuestionIndex);
+        // TODO: DIES WHEN WE RAN OUT OF QUESTIONS.. WHY?!
+        if (questionList.isEmpty() || questionList == null) {
+            questionList = Request.getInstance(context).getQuestionList();
+        }
+
+        Collections.shuffle(questionList);
+        Question question = questionList.get(random.nextInt(questionList.size()));
 
         List<String> answersForQuestion = Request.getInstance(context).getAllAnswer(question);
 
@@ -163,7 +134,7 @@ public class Game {
             answersForQuestion.remove(index);
         }
 
-        questionList.remove(currQuestionIndex);
+        questionList.remove(question);
 
         tvResults.setText("Good anwers:" + players.get(0).getGoodAnswers() + "/" + Details.getElapsedQuestionNum());
         tvTopic.setText(question.getTopic().toString());
