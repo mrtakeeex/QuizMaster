@@ -73,10 +73,14 @@ public class Game {
 //                || btnAnswer3.isPressed() || btnAnswer4.isPressed())) {
 //            goToNextQuestion(player);
 //        }
-        Thread thread = new Thread() {
+        startUiRefreshingThread();
+    }
+
+    private void startUiRefreshingThread() {
+        new Thread() {
             @Override
             public void run() {
-                while (true) {
+                while (!questionList.isEmpty()) {
                     activity.runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -92,17 +96,14 @@ public class Game {
                     });
                 }
             }
-        };
-
-        thread.start();
+        }.start();
     }
 
-    void goToNextQuestion(Player player) {
-        if(countDownTimer != null){
+    private void goToNextQuestion(Player player) {
+        if (countDownTimer != null) {
             countDownTimer.cancel();
         }
-        Question randomQuestion = getRandomQuestion();
-        getTimeLeftInSecAfterPlayerAnswer(randomQuestion, player);
+        getTimeLeftInSecAfterPlayerAnswer(getRandomQuestion(), player);
         Details.incrementElapsedQuestionNum();
     }
 
@@ -122,6 +123,7 @@ public class Game {
                         public void onClick(View view) {
                             if (button.getText().equals(goodAnswer)) {
                                 player.incrementScore(toIntExact(millisUntilFinished / 1000));
+                                player.incrementGoodAnswers();
                                 Toast.makeText(context, "Good! +" + toIntExact(millisUntilFinished / 1000) + " points!",
                                         Toast.LENGTH_LONG).show();
                                 retSec[0] = toIntExact(millisUntilFinished / 1000);
@@ -137,7 +139,7 @@ public class Game {
 
             public void onFinish() {
                 tvTimer.setText("Time up!");
-                Toast.makeText(context, "Time up! The good answer is: " + goodAnswer,
+                Toast.makeText(context, "Time up! The good answer was: " + goodAnswer,
                         Toast.LENGTH_LONG).show();
             }
         }.start();
@@ -163,7 +165,7 @@ public class Game {
 
         questionList.remove(currQuestionIndex);
 
-        tvResults.setText("Good anwers:" + "0" + "/" + Details.getElapsedQuestionNum());
+        tvResults.setText("Good anwers:" + players.get(0).getGoodAnswers() + "/" + Details.getElapsedQuestionNum());
         tvTopic.setText(question.getTopic().toString());
         tvQuestion.setText(question.getQuestionStr());
 
@@ -192,21 +194,5 @@ public class Game {
 
     public void setQuizMaster(QuizMaster quizMaster) {
         this.quizMaster = quizMaster;
-    }
-
-    Button getBtnAnswer1() {
-        return btnAnswer1;
-    }
-
-    Button getBtnAnswer2() {
-        return btnAnswer2;
-    }
-
-    Button getBtnAnswer3() {
-        return btnAnswer3;
-    }
-
-    Button getBtnAnswer4() {
-        return btnAnswer4;
     }
 }

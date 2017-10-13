@@ -23,7 +23,7 @@ public class Details {
     }
 
     static void setDefaultSettings() {
-        timeForAnswerQuestionInSec = 300;
+        timeForAnswerQuestionInSec = 100;
         elapsedQuestionNum = 0;
     }
 }
