@@ -39,6 +39,8 @@ public class Game {
     private List<Player> players;
     private QuizMaster quizMaster;
 
+    private CountDownTimer countDownTimer;
+
     public Game(Activity activity, Context context) {
         this.players = new ArrayList<>();
         this.activity = activity;
@@ -71,21 +73,34 @@ public class Game {
 //                || btnAnswer3.isPressed() || btnAnswer4.isPressed())) {
 //            goToNextQuestion(player);
 //        }
-
-        activity.runOnUiThread(new Runnable() {
+        Thread thread = new Thread() {
             @Override
             public void run() {
                 while (true) {
-                    if (btnAnswer1.isPressed() || btnAnswer2.isPressed()
-                            || btnAnswer3.isPressed() || btnAnswer4.isPressed()) {
-                        goToNextQuestion(players.get(0));
-                    }
+                    activity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (btnAnswer1.isPressed() || btnAnswer2.isPressed()
+                                    || btnAnswer3.isPressed() || btnAnswer4.isPressed()) {
+                                goToNextQuestion(players.get(0));
+                                for (Button button : Arrays.asList(btnAnswer1, btnAnswer2, btnAnswer3, btnAnswer4)) {
+                                    button.setPressed(false);
+                                }
+                            }
+
+                        }
+                    });
                 }
             }
-        });
+        };
+
+        thread.start();
     }
 
     void goToNextQuestion(Player player) {
+        if(countDownTimer != null){
+            countDownTimer.cancel();
+        }
         Question randomQuestion = getRandomQuestion();
         getTimeLeftInSecAfterPlayerAnswer(randomQuestion, player);
         Details.incrementElapsedQuestionNum();
@@ -96,7 +111,8 @@ public class Game {
         String goodAnswer = question.getAnswerGood();
         final int[] retSec = {0};
 
-        new CountDownTimer(Details.getTimeForAnswerQuestionInSec() * 1000, 1000) {
+        // TODO: THIS PART DOES NOT COUNT SCORE OR SHOW TOASTS
+        countDownTimer = new CountDownTimer(Details.getTimeForAnswerQuestionInSec() * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
                 tvTimer.setText("" + millisUntilFinished / 1000);
 
