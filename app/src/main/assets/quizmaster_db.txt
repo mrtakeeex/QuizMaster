@@ -3,48 +3,98 @@ Which of the following is a non metal that remains liquid at room temperature?;B
 Chlorophyll is a naturally occurring chelate compound in which central metal is;magnesium;copper;iron;calcium;SCIENCE
 Which of the following is used in pencils?;Graphite;Charcoal;Silicon;Phosphorous;SCIENCE
 Which of the following metals forms an amalgam with other metals?;Mercury;Tin;Lead;Zinc;SCIENCE
+Bromine is a;red liquid;colourless gas;highly inflammable gas;black solid;SCIENCE
+The hardest substance available on earth is;Diamond;Gold;Iron;Platinum;SCIENCE
+The variety of coal in which the deposit contains recognisable traces of the original plant material is;peat;lignite;anthracite;bitumen;SCIENCE
+Tetraethyl lead is used as;petrol additive;mosquito repellent;fire extinguisher;pain killer;SCIENCE
+Which of the following is used as a lubricant?;Graphite;Silica;Iron Oxide;Diamond;SCIENCE
 Ordinary table salt is sodium chloride. What is baking soda?;Sodium bicarbonate;Potassium chloride;Potassium carbonate;Potassium hydroxide;BIOLOGY
 Pollination is best defined as;transfer of pollen from anther to stigma;germination of pollen grains;growth of pollen tube in ovule;visiting flowers by insects;BIOLOGY
 Plants receive their nutrients mainly from;soil;atmosphere;light;chlorophyll;BIOLOGY
 Movement of cell against concentration gradient is called;active transport;osmosis;diffusion;passive transport;BIOLOGY
 Plants synthesis protein from;amino acids;sugar;starch;fatty acids;BIOLOGY
+Plants absorb most part of water needed by them through their;root hairs;embryonic zone;growing point;zone of elongation;BIOLOGY
+Photo-oxidation is;All of them;photolysis;photorespiration;light and oxygen induced breakdown;BIOLOGY
+Process of cell division can take place by;mitosis;heterosis;fusion;None of these;BIOLOGY
+Most highly intelligent mammals are;dolphins;kangaroos;elephants;whales;BIOLOGY
+Plant development is influenced by;quality, quantity and duration of light;quality and duration of light;quality and quantity of light;quality of light only;BIOLOGY
 In which year was Pulitzer Prize established?;1917;1918;1922;1928;AWARDS
 B. C. Roy Award is given in the field of;Medicine;Journalism;Music;Environment;AWARDS
 Which of the following societies has instituted an award for an outstanding parliamentarian?;G. B. Pant Memorial Society;R. D. Birla samara Kosh;Institute of Constitutional and Parliamentary Studies;Jamanlal Bajaj Foundation;AWARDS
 Which state gives Mewar Award?;Rajasthan;Punjab;Haryana;Delhi;AWARDS
 Who is the first Asian Winner of Nobel Prize?;Rabindranath Tagore;Mother Teresa;Rajiv Gandhi;C. V. Raman;AWARDS
+Pulitzer prize is awarded for outstanding work in the field of;Literature and Journalism;Science and Technology;Environmental Studies;International Understanding;AWARDS
+Saraswathi Samman is given annually for outstanding contribution to;literature;fine arts;education;classical music;AWARDS
+Who among the following has received a Nobel Prize in literature 1953?;Winston Churchill;Ernest Hemingway;Derek Walcott;Pablo Neruda;AWARDS
+The Arjuna Awards were instituted in the year;1961;1965;1963;1957;AWARDS
+The first Indira Gandhi Award for International Justice and Harmony has been given to;Yasser Arafat;Hussain Ibrahim Zaki;Amnesty International;Larry Pressler;AWARDS
 Grand Central Terminal, Park Avenue, New York is the world's;largest railway station;highest railway station;longest railway station;None of the above;GENERAL
 Eritrea, which became the 182nd member of the UN in 1993, is in the continent of;Africa;Asia;Europe;Australia;GENERAL
 Garampani sanctuary is located at;Diphu, Assam;Junagarh, Gujarat;Kohima, Nagaland;Gangtok, Sikkim;GENERAL
 Hitler party which came into power in 1933 is known as;Nazi Party;Ku-Klux-Klan;Labour Party;Democratic Party;GENERAL
 FFC stands for;Film Finance Corporation;Foreign Finance Corporation;Federation of Football Council;None of them;GENERAL
+Exposure to sunlight helps a person improve his health because;the ultraviolet rays convert skin oil into Vitamin D;the pigment cells in the skin get stimulated and produce a healthy tan;resistance power increases;the infrared light kills bacteria in the body;GENERAL
+Golf player Vijay Singh belongs to which country?;Fiji;USA;UK;India;GENERAL
+First Afghan War took place in;1839;1843;1833;1848;GENERAL
+First China War was fought between;China and Britain;China and France;China and Egypt;China and Greek;GENERAL
+Gulf cooperation council was originally formed by;Bahrain, Kuwait, Oman, Qatar, Saudi Arabia and United Arab Emirates;Second World Nations;Third World Nations;Fourth World Nations;GENERAL
 The Homolographic projection has the correct representation of;area;shape;baring;distance;GEOGRAPHY
 The hazards of radiation belts include;All of them;adverse effect on living organisms;damage of solar cells of spacecraft;deterioration of electronic circuits;GEOGRAPHY
 The great Victoria Desert is located in;Australia;Canada;West Africa;North America;GEOGRAPHY
 The landmass of which of the following continents is the least?;Australia;Africa;Asia;Europe;GEOGRAPHY
 The habitats valuable for commercially harvested species are called;sea grass bed;coral reefs;hot spots;None of them;GEOGRAPHY
+The iron and steel industries of which of the following countries are almost fully dependent on imported raw materials?;Japan;Britain;Poland;Germany;GEOGRAPHY
+The temperature increases rapidly after;ionosphere;exosphere;stratosphere;troposphere;GEOGRAPHY
+The humidity of the air depends upon;All of them;weather;location;temperature;GEOGRAPHY
+The groundwater can become confined between two impermeable layers. This type of enclosed water is called;artesian;artesian well;unconfined groundwater;confined groundwater;GEOGRAPHY
+The largest glaciers are;continental glaciers;piedmont glaciers;alpine glaciers;mountain glaciers;GEOGRAPHY
 The nucleus of an atom consists of;protons and neutrons;electrons and neutrons;electrons and protons;All of them;CHEMISTRY
 The number of moles of solute present in 1 kg of a solvent is called its;molality;molarity;normality;formality;CHEMISTRY
 The most electronegative element among the following is;sodium;bromine;fluorine;oxygen;CHEMISTRY
 The metal used to recover copper from a solution of copper sulphate is;Fe;Ag;Na;Hg;CHEMISTRY
 The metallurgical process in which a metal is obtained in a fused state is called;smelting;roasting;calcinations;froth floatation;CHEMISTRY
+The nucleus of a hydrogen atom consists of;1 proton only;1 proton + 2 neutron;1 neutron only;1 electron only;CHEMISTRY
+The heat required to raise the temperature of body by 1 K is called;thermal capacity;specific heat;water equivalent;None of them;CHEMISTRY
+The nuclear particles which are assumed to hold the nucleons together are;mesons;neutrons;positrons;electrons;CHEMISTRY
+The octane number of zero is assigned to;n-heptane;2-methyl octane;iso-octane;3-methyl octane;CHEMISTRY
+The metal that is used as a catalyst in the hydrogenation of oils is;Ni;Cu;Pb;Pt;CHEMISTRY
 In which decade was the American Institute of Electrical Engineers (AIEE) founded?;1880s;1850s;1930s;1950s;TECHNOLOGY
 What is part of a database that holds only one type of information?;Field;Report;Record;File;TECHNOLOGY
 In which decade with the first transatlantic radio broadcast occur?;1900s;1860s;1850s;1870s;TECHNOLOGY
 Which is a type of Electrically-Erasable Programmable Read-Only Memory?;Flash;Flange;Fury;FRAM;TECHNOLOGY
 Who developed Yahoo?;David Filo & Jerry Yang;Vint Cerf & Robert Kahn;Dennis Ritchie & Ken Thompson;Steve Case & Jeff Bezos;TECHNOLOGY
+Made from a variety of materials, such as carbon, which inhibits the flow of current...?;Resistor;Capacitor;Inductor;Choke;TECHNOLOGY
+The most common format for a home video recorder is VHS. VHS stands for...?;Video Home System;Very high speed;Video horizontal standard;Voltage house standard;TECHNOLOGY
+What does VVVF stand for?;Variable Voltage Variable Frequency;Very Very Vicious Frequency;Variant Voltage Vile Frequency;Variable Velocity Variable Fun;TECHNOLOGY
+What frequency range is the High Frequency band?;3 to 30 MHz;30 to 300 MHz;1 GHz;100 kHz;TECHNOLOGY
+Which motor is NOT suitable for use as a DC machine?;Squirrel cage motor;Synchronous motor;Series motor;Permanent magnet motor;TECHNOLOGY
 The absorption of ink by blotting paper involves;capillary action phenomenon;diffusion of ink through the blotting;viscosity of ink;siphon action;PHYSICS
 Nuclear sizes are expressed in a unit named;Fermi;Angstrom;Newton;Tesla;PHYSICS
 Light year is a unit of;distance;time;intensity of light;light;PHYSICS
 Light from the Sun reaches us in nearly;8 minutes;4 minutes;2 minutes;16 minutes;PHYSICS
 Pascal is the unit for;pressure;thrust;frequency;conductivity;PHYSICS
+Metals are good conductors of electricity because;they contain free electrons;the atoms are lightly packed;they have high melting point;All of them;PHYSICS
+Let a thin capillary tube be replaced with another tube of insufficient length then, we find water;will not rise;will overflow;depressed;change its meniscus;PHYSICS
+Out of the following pairs, choose the pair in which the physical quantities do not have identical dimension?;Impulse and moment of force;Planck's constant and Angular momentum;Pressure and Young's modules;Force and rate of change of linear momentum;PHYSICS
+Pick out the scalar quantity;pressure;force;velocity;acceleration;PHYSICS
+Rectifiers are used to convert;Alternating current to Direct current;Direct current to Alternating current;high voltage to low voltage;low voltage to high voltage;PHYSICS
 Who invented the BALLPOINT PEN?;Biro Brothers;Waterman Brothers;Bicc Brothers;Write Brothers;INVENTIONS
 In which decade was the first solid state integrated circuit demonstrated?;1950s;1960s;1970s;1980s;INVENTIONS
 Which scientist discovered the radioactive element radium?;Marie Curie;Benjamin Franklin;Albert Einstein;Isaac Newton;INVENTIONS
 When was barb wire patented?;1874;1840;1895;1900;INVENTIONS
 What Galileo invented?;Thermometer;Barometer;Microscope;Pendulum clock;INVENTIONS
+What now-ubiquitous device was invented by Zenith engineer Eugene Polley in 1955?;Remote control;Microwave oven;VCR;Calculator;INVENTIONS
+What Benjamin Franklin invented?;Bifocal spectacles;Radio;Barometer;Hygrometer;INVENTIONS
+This part-time race car driver invented the bucket seat in 1969. Who was he?;Steve McQueen;Harrison Frazier;Paul Newman;John Wayne;INVENTIONS
+What plaything was invented by Joe McVicker in 1956?;Play-Doh;Lite-Brite;Etch-A-Sketch;Silly Putty;INVENTIONS
+Who invented Gramophone?;Thomas Alva Edison;Sir Alexander Graham Bell;Fahrenheit;Michael Faraday;INVENTIONS
 Which was the 1st non Test playing country to beat India in an international match?;Sri Lanka;Canada;Zimbabwe;East Africa;SPORTS
 Which county did Ravi Shastri play for?;Glamorgan;Leicestershire;Gloucestershire;Lancashire;SPORTS
 Who was the first Indian to win the World Amateur Billiards title?;Wilson Jones;Michael Ferreira;Geet Sethi;Manoj Kothari;SPORTS
 Who is the first Indian woman to win an Asian Games gold in 400m run?;Kamaljit Sandhu;P.T.Usha;M.L.Valsamma;K.Malleshwari;SPORTS
 When was Amateur Athletics Federation of India established?;1936;1946;1956;1966;SPORTS
+India won its first Olympic hockey gold in...?;1928;1932;1936;1948;SPORTS
+Mark Waugh is commonly called what?;Junior;Afganistan;Tugga;Julio;SPORTS
+The nickname of Glenn McGrath is what?;Pigeon;Ooh Ahh;Penguin;Big Bird;SPORTS
+Which two counties did Anil Kumble play for?;Northamptonshire & Leicestershire;Nottinghamshire & Lancashire;Nottinghamshire & Leicestershire;Northamptonshire & Lancashire;SPORTS
+The first hang gliders to be flown were flown in...?;1800s;1600s;1700s;1900s;SPORTS
