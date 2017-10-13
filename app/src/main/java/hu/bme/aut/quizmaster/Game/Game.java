@@ -64,8 +64,8 @@ public class Game {
 
     public void startEndlessMode() {
         Details.setDefaultSettings();
-        players.add(new Player());
-        goToNextQuestion(players.get(0));
+        getPlayers().add(new Player());
+        goToNextQuestion(getPlayers().get(0));
     }
 
     private void goToNextQuestion(Player player) {
@@ -118,7 +118,6 @@ public class Game {
     }
 
     private Question getRandomQuestion() {
-        // TODO: DIES WHEN WE RAN OUT OF QUESTIONS.. WHY?!
         if (questionList.isEmpty() || questionList == null) {
             questionList = Request.getInstance(context).getQuestionList();
         }
