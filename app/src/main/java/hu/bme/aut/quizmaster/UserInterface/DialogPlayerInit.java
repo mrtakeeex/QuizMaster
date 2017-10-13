@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import hu.bme.aut.quizmaster.KeyStore;
+import hu.bme.aut.quizmaster.Utility.KeyStore;
 import hu.bme.aut.quizmaster.R;
 
 public class DialogPlayerInit extends Activity {

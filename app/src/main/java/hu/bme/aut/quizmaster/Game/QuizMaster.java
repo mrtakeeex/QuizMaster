@@ -1,7 +1,7 @@
 package hu.bme.aut.quizmaster.Game;
 
 
-class QuizMaster {
+public class QuizMaster {
     private String name;
 
     public String getName() {

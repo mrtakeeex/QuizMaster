@@ -95,6 +95,7 @@ public class Request {
     }
 
     public List<Question> getQuestionList() {
+        loadQuestionsToList();
         return questionList;
     }
 
@@ -108,6 +109,7 @@ public class Request {
     }
 
     public List<Question> getQuestionsInTopic(Topic topic) {
-        return questionList.stream().filter(o -> o.getTopic().equals(topic)).collect(Collectors.toList());
+        List<Question> questions = questionList;
+        return questions.stream().filter(o -> o.getTopic().equals(topic)).collect(Collectors.toList());
     }
 }

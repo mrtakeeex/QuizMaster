@@ -1,4 +1,4 @@
-package hu.bme.aut.quizmaster;
+package hu.bme.aut.quizmaster.Utility;
 
 import java.util.HashMap;
 import java.util.Map;
