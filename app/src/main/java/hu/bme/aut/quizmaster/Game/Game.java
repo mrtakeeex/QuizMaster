@@ -2,6 +2,7 @@ package hu.bme.aut.quizmaster.Game;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
@@ -83,6 +84,11 @@ public class Game {
 
         countDownTimer = new CountDownTimer(30 * 1000, 1000) {
             public void onTick(long millisUntilFinished) {
+                if ((millisUntilFinished / 1000) <= 10) {
+                    tvTimer.setTextColor(Color.RED);
+                } else {
+                    tvTimer.setTextColor(Color.DKGRAY);
+                }
                 tvTimer.setText("" + millisUntilFinished / 1000);
 
                 for (Button button : Arrays.asList(btnAnswer1, btnAnswer2, btnAnswer3, btnAnswer4)) {
@@ -98,6 +104,7 @@ public class Game {
                             } else {
                                 Toast.makeText(context, "WRONG! The good answer is: " + goodAnswer,
                                         Toast.LENGTH_LONG).show();
+
                                 goToNextQuestion(player);
                             }
                         }
@@ -141,6 +148,13 @@ public class Game {
         tvQuestion.setText(question.getQuestionStr());
 
         return question;
+    }
+
+    public void stopGame() {
+        countDownTimer.cancel();
+        questionList.clear();
+        players.clear();
+        elapsedQuestionNum = 0;
     }
 
     public void addPlayer(Player player) {
