@@ -7,6 +7,14 @@
     tools:context="hu.bme.aut.quizmaster.UserInterface.QuizMasterGameActivity">
 
     <TextView
+        android:id="@+id/tvQuizMasterGamePlayerName"
+        style="@style/DefaultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp" />
+
+    <TextView
         style="@style/HeaderText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,9 +24,9 @@
     <TextView
         android:id="@+id/tvQmTimer"
         style="@style/HeaderText"
-        android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp" />
 
     <LinearLayout

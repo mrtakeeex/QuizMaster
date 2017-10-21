@@ -151,9 +151,15 @@ public class Game {
     }
 
     public void stopGame() {
-        countDownTimer.cancel();
-        questionList.clear();
-        players.clear();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
+        if (questionList != null) {
+            questionList.clear();
+        }
+        if (players != null) {
+            players.clear();
+        }
         elapsedQuestionNum = 0;
     }
 

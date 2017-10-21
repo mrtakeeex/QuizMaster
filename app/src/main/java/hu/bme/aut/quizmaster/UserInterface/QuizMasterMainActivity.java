@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import hu.bme.aut.quizmaster.R;
+import hu.bme.aut.quizmaster.Utility.KeyStore;
 
 public class QuizMasterMainActivity extends Activity {
 
@@ -17,6 +19,9 @@ public class QuizMasterMainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_master_main);
+
+        TextView tvPlayerName = (TextView) findViewById(R.id.tvQuizMasterMainPlayerName);
+        tvPlayerName.setText("You are playing as " + KeyStore.values.get(KeyStore.PLAYER_NAME));
 
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 

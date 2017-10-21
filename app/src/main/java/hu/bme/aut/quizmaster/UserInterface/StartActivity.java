@@ -6,8 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import hu.bme.aut.quizmaster.Utility.KeyStore;
+import hu.bme.aut.quizmaster.Database.Request;
 import hu.bme.aut.quizmaster.R;
+import hu.bme.aut.quizmaster.Utility.KeyStore;
 
 public class StartActivity extends Activity {
 
@@ -19,6 +20,9 @@ public class StartActivity extends Activity {
         playAsPlayer();
         playAsQuizMaster();
         openQuickPlayActivity();
+
+        // Init db when app starts
+        Request.getInstance(this);
     }
 
     private void openQuickPlayActivity() {
