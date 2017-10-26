@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:padding="20dp"
+        android:padding="10dp"
         android:text="Welcome in Quiz Master!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -24,16 +24,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="2"
-        android:padding="20dp"
+        android:padding="10dp"
         android:text="You have the chance to be the Quiz master or you can compare your knowledge with your friends as a Player!\nIf you just want to practise, choose Endless option!\nPlease make your decision now!" />
 
     <Button
         android:id="@+id/btnPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:text="Player" />
 
@@ -41,9 +41,9 @@
         android:id="@+id/btnQuizMaster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
         android:layout_weight="1"
         android:text="Quiz Master" />
 
@@ -51,7 +51,7 @@
         android:id="@+id/btnQuickPlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:layout_weight="1"
         android:text="Endless" />
 
