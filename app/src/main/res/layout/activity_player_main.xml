@@ -6,11 +6,6 @@
     android:orientation="vertical"
     tools:context="hu.bme.aut.quizmaster.UserInterface.PlayerMainActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hello Player Main Activity!" />
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:layout_weight="0.3"
-            android:text="qm name" />
+            android:text="Gergo's game" />
 
         <TextView
             android:layout_width="0dp"

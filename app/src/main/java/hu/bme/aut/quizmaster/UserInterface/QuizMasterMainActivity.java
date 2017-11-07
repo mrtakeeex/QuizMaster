@@ -24,11 +24,14 @@ public class QuizMasterMainActivity extends Activity {
         tvPlayerName.setText("You are playing as " + KeyStore.values.get(KeyStore.PLAYER_NAME));
 
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
-        View availablePlayerItem = layoutInflater.inflate(R.layout.available_player_item, null);
         LinearLayout availablePlayersList = (LinearLayout) findViewById(R.id.available_players_list);
 
-        availablePlayersList.addView(availablePlayerItem);
+        for (int i = 0; i < 5; i++) {
+            View availablePlayerItem = layoutInflater.inflate(R.layout.available_player_item, null);
+            TextView tvAvailablePlayerName = (TextView) availablePlayerItem.findViewById(R.id.tvAvailablePlayer);
+            tvAvailablePlayerName.setText("Player " + i);
+            availablePlayersList.addView(availablePlayerItem);
+        }
 
         startGame();
     }

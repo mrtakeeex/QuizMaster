@@ -13,10 +13,11 @@
         android:elevation="2dp">
 
         <TextView
+            android:id="@+id/tvAvailablePlayer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:text="PLAYER" />
+            android:text="Player" />
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
