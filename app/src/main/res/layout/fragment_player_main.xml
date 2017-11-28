@@ -4,24 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="hu.bme.aut.quizmaster.UserInterface.PlayerLobbyActivity">
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Waiting for other players to connect ..." />
+    tools:context="hu.bme.aut.quizmaster.UserInterface.Player.PlayerMainFragment">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
-            android:id="@+id/available_players_list"
+            android:id="@+id/available_rooms_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:scrollbars="vertical" />
     </ScrollView>
-
-
 </LinearLayout>

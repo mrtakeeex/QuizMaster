@@ -1,10 +1,12 @@
-package hu.bme.aut.quizmaster.UserInterface;
+package hu.bme.aut.quizmaster.UserInterface.QuizMaster;
 
-import android.app.Activity;
+import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -18,7 +20,7 @@ import hu.bme.aut.quizmaster.Database.Request;
 import hu.bme.aut.quizmaster.R;
 import hu.bme.aut.quizmaster.Utility.KeyStore;
 
-public class QuizMasterGameActivity extends Activity {
+public class QuizMasterGameFragment extends Fragment {
 
     private List<String> allTopics;
     private TextView tvQmTimer;
@@ -28,16 +30,26 @@ public class QuizMasterGameActivity extends Activity {
     private List<Button> buttons;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_master_game);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_quiz_master_game, container, false);
 
-        init();
+        Button btnTopic1 = (Button) view.findViewById(R.id.btnTopic1);
+        Button btnTopic2 = (Button) view.findViewById(R.id.btnTopic2);
+        Button btnTopic3 = (Button) view.findViewById(R.id.btnTopic3);
+        Button btnTopic4 = (Button) view.findViewById(R.id.btnTopic4);
+        tvQmTimer = (TextView) view.findViewById(R.id.tvQmTimer);
+        tvPlayerName = (TextView) view.findViewById(R.id.tvQuizMasterGamePlayerName);
+        allTopics = Request.getInstance(getActivity()).getTopicNamesInString();
+        random = new Random();
+        buttons = Arrays.asList(btnTopic1, btnTopic2, btnTopic3, btnTopic4);
 
         tvPlayerName.setText("You are playing as " + KeyStore.values.get(KeyStore.PLAYER_NAME));
 
         setNextFourTopics();
+
+        return view;
     }
+
 
     private void setNextFourTopics() {
         for (Button button : buttons) {
@@ -77,22 +89,10 @@ public class QuizMasterGameActivity extends Activity {
         }.start();
     }
 
-    private void init() {
-        Button btnTopic1 = (Button) findViewById(R.id.btnTopic1);
-        Button btnTopic2 = (Button) findViewById(R.id.btnTopic2);
-        Button btnTopic3 = (Button) findViewById(R.id.btnTopic3);
-        Button btnTopic4 = (Button) findViewById(R.id.btnTopic4);
-        tvQmTimer = (TextView) findViewById(R.id.tvQmTimer);
-        tvPlayerName = (TextView) findViewById(R.id.tvQuizMasterGamePlayerName);
-        allTopics = Request.getInstance(this).getTopicNamesInString();
-        random = new Random();
-        buttons = Arrays.asList(btnTopic1, btnTopic2, btnTopic3, btnTopic4);
-    }
-
 
     private void loadRandomFourTopics() {
         if (allTopics.isEmpty() || allTopics == null) {
-            allTopics = Request.getInstance(this).getTopicNamesInString();
+            allTopics = Request.getInstance(getActivity()).getTopicNamesInString();
         }
 
         Collections.shuffle(allTopics);

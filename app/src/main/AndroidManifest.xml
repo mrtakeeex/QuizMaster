@@ -38,29 +38,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserInterface.PlayerMainActivity"
-            android:label="Available rooms"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".UserInterface.QuizMasterMainActivity"
-            android:label="Lobby"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".UserInterface.DialogPlayerInit"
             android:label="Add a nickname"
             android:screenOrientation="portrait"
             android:theme="@android:style/Theme.Dialog" />
         <activity
-            android:name=".UserInterface.QuizMasterGameActivity"
-            android:label="Game"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".UserInterface.EndlessGameActivity"
             android:label="Endless mode"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".UserInterface.PlayerLobbyActivity"
-            android:label="Lobby"
+            android:name=".UserInterface.PlayerActivity"
+            android:label="Player mode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserInterface.QuizMasterActivity"
+            android:label="Quiz Master mode"
             android:screenOrientation="portrait" />
     </application>
 

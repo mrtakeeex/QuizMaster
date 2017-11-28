@@ -19,13 +19,13 @@ public class StartActivity extends Activity {
 
         playAsPlayer();
         playAsQuizMaster();
-        openQuickPlayActivity();
+        openEndlessModeActivity();
 
         // Init db when app starts
         Request.getInstance(this);
     }
 
-    private void openQuickPlayActivity() {
+    private void openEndlessModeActivity() {
         Button btnQuickPlay = (Button) findViewById(R.id.btnQuickPlay);
         btnQuickPlay.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +41,7 @@ public class StartActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, DialogPlayerInit.class);
-                intent.putExtra(KeyStore.WHICH_BUTTON_CLICKED, PlayerMainActivity.class);
+                intent.putExtra(KeyStore.WHICH_BUTTON_CLICKED, PlayerActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,7 +53,7 @@ public class StartActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(StartActivity.this, DialogPlayerInit.class);
-                intent.putExtra(KeyStore.WHICH_BUTTON_CLICKED, QuizMasterMainActivity.class);
+                intent.putExtra(KeyStore.WHICH_BUTTON_CLICKED, QuizMasterActivity.class);
                 startActivity(intent);
             }
         });
