@@ -37,12 +37,22 @@ public class Game {
     private Button btnAnswer4;
 
     private List<Question> questionList;
+
+    public int getElapsedQuestionNum() {
+        return elapsedQuestionNum;
+    }
+
     private int elapsedQuestionNum;
 
     private List<Player> players;
     private QuizMaster quizMaster;
 
     private CountDownTimer countDownTimer;
+
+    public Game(){
+        this.players = new ArrayList<>();
+        this.elapsedQuestionNum = 0;
+    }
 
     public Game(Activity activity, Context context) {
         this.players = new ArrayList<>();
