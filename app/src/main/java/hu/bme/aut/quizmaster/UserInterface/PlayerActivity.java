@@ -51,7 +51,7 @@ public class PlayerActivity extends BluetoothFragmentActivity implements Discove
         selectClientMode();
 
         scanAllBluetoothDevice();
-        mDiscoveredDialogListener.onScanClicked();
+        onScanClicked();
     }
 
     @Override
